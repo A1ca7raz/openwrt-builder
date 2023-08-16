@@ -8,7 +8,7 @@
 # Description: Build OpenWrt using GitHub Actions
 #
 
-name: Build OpenWrt
+name: Build OpenWrt for x86_64 PC
 
 on:
   repository_dispatch:
@@ -18,13 +18,13 @@ env:
   REPO_URL: https://github.com/immortalwrt/immortalwrt/
   REPO_BRANCH: master
   FEEDS_CONF: feeds.conf.default
-  CONFIG_FILE: .config
+  CONFIG_FILE: cfg_x86.config
   DIY_P1_SH: custom-feeds.sh      # Custom feeds
   DIY_P2_SH: custom-config.sh     # Custom configuration
   UPLOAD_BIN_DIR: true
   UPLOAD_FIRMWARE: true
   UPLOAD_RELEASE: true
-  RELEASE_PREFIX:
+  RELEASE_PREFIX: RM2100
   TZ: Asia/Shanghai
 
 jobs:
